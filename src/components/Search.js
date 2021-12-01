@@ -5,7 +5,7 @@ class Search extends Component {
         super(props);
     }
     state={
-        search:'panda',
+        search:'supermen',
         type:'all',
     }
     handleKey = (e)=>{
