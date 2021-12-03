@@ -12,13 +12,13 @@ export default class Main extends React.Component{
         }
     }
     componentDidMount() {
-        fetch(`http://www.omdbapi.com/?apikey=a9266e7d&s=supermen`)
+        fetch(`https://www.omdbapi.com/?apikey=a9266e7d&s=supermen`)
             .then(response=> response.json())
             .then((data) => this.setState({movies:data.Search, total:data.totalResults, loading:false}))
     }
     searchMovies = (str, type='all')=>{
         this.setState({loading:true});
-        fetch(`http://www.omdbapi.com/?apikey=a9266e7d&s=${str}${type!=='all' ? `&type=${type}`:''}`)
+        fetch(`https://www.omdbapi.com/?apikey=a9266e7d&s=${str}${type!=='all' ? `&type=${type}`:''}`)
             .then(response=> response.json())
             .then((data) => this.setState({movies:data.Search,total:data.totalResults, loading:false}))
     }

@@ -15,5 +15,5 @@ export default function Header(){
 }
 
 const HeaderNav = styled.nav`
-        padding: 0 20px;
+  padding: 0 20px;
 `
